@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+ 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url('Images/ima.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+}
+h2 {
+    text-align: center;
+    color: aqua;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+#studentForm, #studentsList, #snsMessages {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.7s ease;
+}
+#studentForm:hover, #studentsList:hover, #snsMessages:hover {
+    transform: translateY(-5px);
+}
+input[type="text"], button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.7s ease;
+}
+input[type="text"]:focus {
+    border-color: #74ebd5;
+}
+button {
+    cursor: pointer;
+    background: #74ebd5;
+    color: #fff;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background 0.5s, transform 0.5s;
+}
+button:hover {
+    background: #68d7c8;
+    transform: scale(1.05);
+}
+#studentsList li {
+    background: #e3f2fd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    list-style-type: none;
+    transition: background 0.3s;
+}
+#studentsList li:hover {
+    background: #bbdefb;
+}
+#snsMessages h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+    font-weight: 700;
+}
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+/* Keyframe animations for form appearance */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 3;
+    }
+}
+#studentForm {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+#h2 {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}

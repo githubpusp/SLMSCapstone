@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Student Management System</title>  
+<link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+<h2 id="formHeader"><b>STUDENT MANAGEMENT</b></h2>  
+<form id="studentForm">  
+<input type="text" id="studentName" placeholder="Student Name">  
+<input type="text" id="studentReg" placeholder="Mobile Number" required>  
+<input type="text" id="studentEmail" placeholder="Student Email">  
+<!--<input type="text" id="updateKey" placeholder="Attribute Name (for Update)"> -->  
+<!--<input type="text" id="updateValue" placeholder="New Value (for Update)"> -->  
+<button type="button" onclick="addOrUpdateStudent()">Add Student</button>  
+<button type="button" onclick="redirectToS3()">CHOOSE COURSE</button>  
+</form>  
+<div id="snsMessages">  
+<!-- SNS messages will be populated here -->  
+</div>  
+<script src="fi.js"></script>  
+<script>    
+         
+      
+        function redirectToS3() {    
+            var userEmail = document.getElementById("studentEmail").value; // Get the user's email ID    
+            var url = "https://bucketfordepts.s3.ap-northeast-2.amazonaws.com/DEPTS/depts.html";  
+       
+            url += "?email=" + encodeURIComponent(userEmail); // Append email ID as a query parameter    
+            window.open(url, "_blank");    
+        }    
+    </script>  
+</body>  
+</html>

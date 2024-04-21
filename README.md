@@ -1,2 +1,2 @@
 
-![Image](homepage.png)
+![homepage](homepage.png)

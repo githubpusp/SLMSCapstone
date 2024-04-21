@@ -1,2 +1,2 @@
 
-![Profile Image](homepage.png)
+![Image](homepage.png)
